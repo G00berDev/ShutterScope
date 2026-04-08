@@ -27,28 +27,34 @@ const linkAction = () =>{
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*=============== SWIPER CLOTHING ===============*/
+/*=============== SWIPER ===============*/
 let swiperHome = new Swiper('.home__swiper', {
    loop: true,
    grabCursor: true,
-   slidesPerView: 'auto',
-   
+   centeredSlides: true,
+   slidesPerView: "auto",
+   spaceBetween: 40,
+   speed: 1000,
+
+   autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+   },
+
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
    },
-   
-   breakpoints:{
+
+    breakpoints:{
       768: {
-         slidesPerView: 3,
-         centeredSlides: 'auto',
+         slidesPerView: 2,
       },
       1152: {
-         centeredSlides: 'auto',
-         spaceBetween: -64,
+         slidesPerView: 3,
       },
    },
-})
+});
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const bgHeader = () =>{

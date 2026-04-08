@@ -107,71 +107,63 @@
 </div>
 
 <div class="vignette hide"></div>
-<!-- <img src="img/360_F_277268851_gf1sqxszssfMlPasgqvjtf2ddwMKmeLI.jpg" data-speedx="0.3" data-speedy="0.38" data-speedz="0" data-rotation="0"
-    data-distance="-200" class="parallax bg-img"> -->
-<!-- <img src="img/fog_7.png" data-speedx="0.27" data-speedy="0.32" data-speedz="0" data-rotation="0" data-distance="850"
-    class="parallax fog-7"> -->
-<img src="./img/Untitled-design-2023-08-10T093341.090-removebg-preview.png" data-speedx="0.195" data-speedy="0.305" data-speedz="0" data-rotation="0"
+<div class="scene">
+<img src="./img/TrueSunSet.png" data-speedx="0.195" data-speedy="0.305" data-speedz="0" data-rotation="0"
     data-distance="1100" class="parallax mountain-10">
-<!-- <img src="img/fog_6.png" data-speedx="0.25" data-speedy="0.28" data-speedz="0" data-rotation="0"
-    data-distance="1400" class="parallax fog-6"> -->
-<img src="./img/isaman-removebg-preview.png" data-speedx="0.125" data-speedy="0.155" data-speedz="0.15" data-rotation="0.02"
+
+<img src="./img/Left.png" data-speedx="0.125" data-speedy="0.155" data-speedz="0.15" data-rotation="0.02"
     data-distance="1700" class="parallax mountain-9">
-<img src="./img/log-cabin-7193284_960_720.webp" data-speedx="0.1" data-speedy="0.11" data-speedz="0" data-rotation="0.02"
+<img src="./img/anothertower.png" data-speedx="0.1" data-speedy="0.11" data-speedz="0" data-rotation="0.02"
     data-distance="1800" class="parallax mountain-8">
 <div class="text parallax" data-speedx="0.07" data-speedy="0.07" data-speedz="0" data-rotation="0.11">
     <h2>ShutterScope</h2>
     <h1>Studios</h1>
 </div>
-<img src="./img/What-trees-do-for-our-planet-1080x675-ai-brush-removebg-cm0ll5ti.png" data-speedx="0.0235" data-speedy="0.013" data-speedz="0.42" data-rotation="0.15"
+<img src="./img/Right.png" data-speedx="0.0235" data-speedy="0.013" data-speedz="0.42" data-rotation="0.15"
     data-distance="3800" class="parallax mountain-2">
-<img src="./img/unnamed__2_-removebg-preview.png" data-speedx="0.027" data-speedy="0.018" data-speedz="0.53" data-rotation="0.2"
+<img src="./img/Green_Grass.png" data-speedx="0.027" data-speedy="0.018" data-speedz="0.53" data-rotation="0.2"
     data-distance="4000" class="parallax mountain-1">
 <img src="img/sun_rays.png" class="sun-rays hide">
 <img src="img/black_shadow.png" class="black-shadow hide">
-<!-- <img src="img/fog_1.png" data-speedx="0.12" data-speedy="0.01" data-speedz="0" data-rotation="0"
-    data-distance="4200" class="parallax fog-1"> -->
-    <aside class="sidebar">
-    <div class="logo">
-    </div>
+</div>
 
 
-    <aside class="sidebar">
+      <aside class="sidebar">
         <div class="logo">
-            <img src="#" alt="">
+          <img src="./img/image1.png" alt="">
         </div>
         <ul class="links">
-            <h4>Main Menu</h4>
-            <li>
+          <h4>Main Menu</h4>
+          <li>
             <span class="material-symbols-outlined">dashboard</span>
             <a href="./gallery.html">gallery</a>
-            </li>
-            <li>
+          </li>
+          <li>
             <span class="material-symbols-outlined">show_chart</span>
             <a href="./about.html">about</a>
-            </li>
-            <li>
+          </li>
+          <li>
             <span class="material-symbols-outlined">flag</span>
             <a href="./service.html">service</a>
-            </li>
-            <hr>
-            <h4>Advanced</h4>
-            <li>
+          </li>
+          <hr>
+          <h4>Advanced</h4>
+          <li>
             <span class="material-symbols-outlined">group</span>
-            <a href="MentorShip.html">Mentorship</a>
-            </li>
-            <hr>
-            <h4>Account</h4>
-            <li>
+            <a href="./MentorShip.html">Mentorship</a>
+          </li>
+          <hr>
+          <h4>Account</h4>
+          <li>
             <span class="material-symbols-outlined">mail</span>
-            <a href="contact.html">contact</a>
-            </li>
-            <li class="logout-link">
+            <a href="./contact.html">contact</a>
+          </li>
+          <li class="logout-link">
             <span class="material-symbols-outlined">logout</span>
             <a href="#">Logout</a>
-            </li>
+          </li>
         </ul>
-        </aside>
+      </aside>
         </main>
 
 
@@ -180,6 +172,26 @@
     <script src="vanilla-tilt.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/new.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script>
+// Calculate viewport units for responsive fullscreen
+function updateVhVw() {
+  let vh = window.innerHeight * 0.01;
+  let vw = window.innerWidth * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  document.documentElement.style.setProperty('--vw', `${vw}px`);
+}
+
+// Run on load
+updateVhVw();
+
+// Update on resize or fullscreen
+window.addEventListener('resize', updateVhVw);
+window.addEventListener('fullscreenchange', updateVhVw);
+
+let vw = window.innerWidth * 0.01;
+document.documentElement.style.setProperty('--vw', `${vw}px`);
+    </script>
 
 </body>
 </html>

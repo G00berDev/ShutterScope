@@ -9,114 +9,13 @@ box-sizing: border-box;
 }
 
 body {
-font-family: "Poppins", sans-serif;
-}
-
-::selection {
-background-color: #0b372dbb;
-}
-
-.logo {
-width: 100px;
-}
-
-header {
-position: absolute;
-z-index: 9999;
-width: 100%;
-padding: 0.9rem 0;
-top: 0;
-left: 0;
-border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-header nav {
-max-width: 1400px;
-margin: 0 auto;
-padding: 0 2rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-display: flex;
-}
-
-header ul {
-list-style: none;
-align-items: center;
-display: flex;
-}
-
-header ul a {
-text-decoration: none;
-color: #fff;
-padding: 0 1.5rem;
-text-transform: uppercase;
-font-weight: 300;
-font-size: 0.83rem;
-}
-
-.search a {
-font-size: 1.05rem;
-padding: 0 3rem;
-}
-
-.hamburger {
-padding-left: 1.5rem;
-}
-
-.hamburger a {
-padding: 0;
-width: 37px;
-height: 37px;
-display: flex;
-border-radius: 50%;
-background-color: rgba(115, 115, 115, 0.7);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-justify-content: center;
-align-items: center;
-}
-
-.hamburger .bar {
-position: relative;
-width: 52%;
-height: 1.3px;
-background-color: #fff;
-border-radius: 2px;
-}
-
-.hamburger .bar::before,
-.hamburger .bar::after {
-content: "";
-position: absolute;
-left: 50%;
-transform: translateX(-50%);
-width: 60%;
-height: 100%;
-background-color: inherit;
-border-radius: 2px;
-}
-
-.hamburger .bar::before {
-top: -4.5px;
-}
-
-.hamburger .bar::after {
-top: 4.5px;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
-
-*,
-*::before,
-*::after {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  background: url('bg-pic.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
 }
 
 ::selection {
@@ -213,16 +112,68 @@ top: 4.5px;
 }
 
 main {
-position: relative;
 height: 100vh;
-width: 100vw;
-overflow: hidden;
+display: flex;
+flex-direction: column;
 }
 
 .parallax {
-pointer-events: none;
-transition: none;
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
 }
+
+.mountain-10 {
+  width: 100vw;
+  bottom: -10vh;
+  left: 0;
+  z-index: 3;
+}
+
+.mountain-9 {
+  width: 100vw;
+  bottom: -10vh;
+  left: 0vw;
+  z-index: 7;
+}
+
+.mountain-8 {
+  width: 100vw;
+  bottom: -8.7vh;
+  left: 0vw;
+  z-index: 10;
+}
+
+.mountain-2 {
+  width: 100vw;
+  bottom: -10vh;
+  left: 0vw;
+  z-index: 4;
+}
+
+.mountain-1 {
+  position: absolute;
+  bottom: -3vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 18;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: calc(var(--vh) * 100);
+  overflow: hidden;
+}
+
+.mountain-1, .mountain-2, .mountain-8, .mountain-9, .mountain-10 {
+  position: absolute;
+  max-width: 1920px;
+  max-height: 1080px;
+}
+
 
 .bg-img {
 position: absolute;
@@ -230,76 +181,14 @@ width: 200%;
 z-index: 1;
 }
 
-.fog-7 {
-position: absolute;
-z-index: 2;
-top: 37.7%;
-left: 70.8%;
-width: 132%;
-}
-
-.mountain-10 {
-position: absolute;
-z-index: 3;
-width: 1800px;
-top: calc(100% - 900px);
-left: -200px;
-overflow-x: hidden;
-}
-
-
-.fog-6 {
-position: absolute;
-z-index: 4;
-top: 62.09%;
-left: 50.4%;
-width: 129.3%;
-}
-
-.mountain-9 {
-position: absolute;
-z-index: 7;
-width: 1550px;
-top: calc(88.5vh - 750px);
-left: -325px;
-}
-
-
-.mountain-8 {
-position: absolute;
-z-index: 10;
-width: 400px;
-top: calc(130.95vh - 750px);
-left: 25px;
-}
-
-
-
-.fog-5 {
-position: absolute;
-z-index: 7;
-top: 69.7%;
-left: 51.3%;
-width: 31.25%;
-}
-
-.mountain-7 {
-position: absolute;
-z-index: 8;
-width: 37.36%;
-top: 65.18%;
-left: 71.18%;
-}
-
 .text {
-position: absolute;
-z-index: 6;
-top: 6.5%;
-left: 41%;
-text-align: center;
-text-transform: uppercase;
-color: #fff;
-pointer-events: auto;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  color: #fff;
 }
 
 .text h2 {
@@ -312,79 +201,6 @@ line-height: 0.88;
 font-weight: 800;
 line-height: 0.88;
 font-size: 8.7rem;
-}
-
-.mountain-6 {
-position: absolute;
-z-index: 10;
-top: 57.4%;
-width: 28.33%;
-left: 90.97%;
-}
-
-.fog-4 {
-position: absolute;
-z-index: 11;
-top: 77.7%;
-left: 45.84%;
-width: 40.27%;
-}
-
-.mountain-5 {
-position: absolute;
-z-index: 12;
-top: 80.86%;
-width: 43.4%;
-left: 59%;
-}
-
-.fog-3 {
-position: absolute;
-z-index: 13;
-top: 63.58%;
-left: 48.27%;
-width: 107.63%;
-}
-
-.mountain-4 {
-position: absolute;
-z-index: 14;
-top: 74.19%;
-width: 54.16%;
-left: 23.55%;
-}
-
-.mountain-3 {
-position: absolute;
-z-index: 15;
-top: 61.35%;
-left: 101.11%;
-width: 32.22%;
-}
-
-.fog-2 {
-position: absolute;
-z-index: 16;
-top: 68.14%;
-left: 48%;
-width: 108.33%;
-}
-
-.mountain-2 {
-position: absolute;
-z-index: 4;
-width: fit-content;
-height: fit-content;
-right: -17%;
-top: calc(95vh - 750px);
-}
-
-.mountain-1 {
-position: absolute;
-z-index: 18;
-bottom: -1.5%;
-width: 1500px;
-height: 784.6px;
 }
 
 .sun-rays {
@@ -405,14 +221,6 @@ pointer-events: none;
 width: 100%;
 }
 
-.fog-1 {
-position: absolute;
-z-index: 21;
-top: 59.26%;
-left: 50.69%;
-width: 111.8%;
-}
-
 .vignette {
 overflow-y: hidden;
 overflow-x: hidden;
@@ -428,16 +236,7 @@ rgba(0, 0, 0, 0) 65%,
 rgba(0, 0, 0, 0.7)
 );
 pointer-events: none;
-}
-
-@media (max-width: 1100px) {
-.text h1 {
-font-size: 5.8rem;
-}
-
-.text h2 {
-font-size: 4.7rem;
-}
+display: none;
 }
 
 @media (max-width: 725px) {
@@ -482,126 +281,6 @@ width: 30px;
 width: initial;
 height: 208.1%;
 }
-
-.fog-7 {
-width: initial;
-height: 146.17%;
-}
-
-.mountain-10 {
-width: initial;
-height: 77.59%;
-}
-
-.fog-6 {
-width: initial;
-height: 73.11%;
-}
-
-.mountain-9 {
-height: 87.64%;
-width: initial;
-}
-
-.mountain-8 {
-height: 84.33%;
-width: initial;
-}
-
-.fog-5 {
-width: initial;
-height: 54.16%;
-}
-
-.mountain-7 {
-width: initial;
-height: 72.26%;
-}
-
-.mountain-6 {
-width: initial;
-height: 56.78%;
-}
-
-.fog-4 {
-width: initial;
-height: 104.5%;
-}
-
-.mountain-5 {
-width: initial;
-height: 60.64%;
-}
-
-.fog-3 {
-width: initial;
-height: 90.78%;
-}
-
-.mountain-4 {
-width: initial;
-height: 71.42%;
-}
-
-.mountain-3 {
-width: initial;
-height: 96.86%;
-}
-
-.fog-2 {
-width: initial;
-height: 84.73%;
-}
-
-.mountain-2 {
-display: none;
-}
-
-.flowers {
-width: 1000px;
-height: 100.03%;
-left: auto;
-bottom: 0%;
-}
-
-.fog-1 {
-width: initial;
-height: 89.86%;
-}
-}
-
-@media (max-width: 520px) {
-.text h1 {
-font-size: 3.3rem;
-}
-
-.text h2 {
-font-size: 2.6rem;
-}
-}
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
-
-*,
-*::before,
-*::after {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
-}
-
-body {
-overflow-x: hidden; /* Hide horizontal scrollbar */
-overflow-y: hidden; /* Hide vertical scrollbar */
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-background: url('bg-pic.jpg');
-background-size: cover;
-background-position: center;
-margin: 0;
-padding: 45px 0;
 }
 
 @keyframes fadeIn {
@@ -640,8 +319,6 @@ box-sizing: border-box;
 opacity: 0;
 animation: fadeIn 1s ease-in-out 4s forwards;
 }
-
-
 
 .card .wrapper {
 display: flex;
@@ -690,13 +367,6 @@ text-transform: uppercase;
 letter-spacing: 1.4px;
 color: black;
 box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-}
-
-main {
-position: relative;
-height: 100vh;
-width: 100vw;
-overflow: hidden;
 }
 
 * {
@@ -751,19 +421,12 @@ border-radius: 50%;
 animation: cycle 4s infinite;
 }
 
-/* @keyframes cycle {
-0%, 100% { opacity: 0; }
-25% { opacity: 1; }
-} */
-
 .logo h2 {
 font-size: 1.15rem;
 font-weight: 600;
 margin-left: 15px;
 display: none;
 }
-
-
 
 .sidebar:hover .logo h2 {
 display: block;
@@ -832,285 +495,4 @@ display: block;
 .links .logout-link {
 margin-top: 20px;
 }
-
-@media (max-width: 1100px) {
-.text h1 {
-    font-size: 5.8rem;
-}
-
-.text h2 {
-    font-size: 4.7rem;
-}
-}
-
-@media (max-width: 725px) {
-.text h1 {
-    font-size: 5rem;
-    line-height: 1.1;
-}
-
-.text h2 {
-    font-size: 4.1rem;
-    line-height: 1.1;
-}
-
-header nav {
-    padding: 0 1rem;
-}
-
-.logo {
-    width: 75px;
-}
-
-header ul a {
-    font-size: 0.73rem;
-    padding: 0 0.9rem;
-}
-
-.search a {
-    font-size: 0.85rem;
-    padding: 0 1.8rem;
-}
-
-.hamburger {
-    padding-left: 0.9rem;
-}
-
-.hamburger a {
-    height: 30px;
-    width: 30px;
-}
-
-.bg-img {
-    width: initial;
-    height: 208.1%;
-}
-
-.fog-7 {
-    width: initial;
-    height: 146.17%;
-}
-
-.mountain-10 {
-    width: initial;
-    height: 77.59%;
-}
-
-.fog-6 {
-    width: initial;
-    height: 73.11%;
-}
-
-.mountain-9 {
-    height: 87.64%;
-    width: initial;
-}
-
-.mountain-8 {
-    height: 84.33%;
-    width: initial;
-}
-
-.fog-5 {
-    width: initial;
-    height: 54.16%;
-}
-
-.mountain-7 {
-    width: initial;
-    height: 72.26%;
-}
-
-.mountain-6 {
-    width: initial;
-    height: 56.78%;
-}
-
-.fog-4 {
-    width: initial;
-    height: 104.5%;
-}
-
-.mountain-5 {
-    width: initial;
-    height: 60.64%;
-}
-
-.fog-3 {
-    width: initial;
-    height: 90.78%;
-}
-
-.mountain-4 {
-    width: initial;
-    height: 71.42%;
-}
-
-.mountain-3 {
-    width: initial;
-    height: 96.86%;
-}
-
-.fog-2 {
-    width: initial;
-    height: 84.73%;
-}
-
-.mountain-2 {
-    display: none;
-}
-
-.flowers {
-    width: 1000px;
-    height: 100.03%;
-    left: auto;
-    bottom: 0%;
-}
-
-.fog-1 {
-    width: initial;
-    height: 89.86%;
-}
-}
-
-@media (max-width: 520px) {
-.text h1 {
-    font-size: 3.3rem;
-}
-
-.text h2 {
-    font-size: 2.6rem;
-}
-}
-
-@media (max-width: 1100px) {
-    .text h1 {
-        font-size: 5.8rem;
-    }
-    
-    .text h2 {
-        font-size: 4.7rem;
-    }
-    }
-    
-    @media (max-width: 725px) {
-    .text h1 {
-        font-size: 5rem;
-        line-height: 1.1;
-    }
-    
-    .text h2 {
-        font-size: 4.1rem;
-        line-height: 1.1;
-    }
-    
-    header nav {
-        padding: 0 1rem;
-    }
-    
-    .logo {
-        width: 75px;
-    }
-    
-    header ul a {
-        font-size: 0.73rem;
-        padding: 0 0.9rem;
-    }
-    
-    .search a {
-        font-size: 0.85rem;
-        padding: 0 1.8rem;
-    }
-    
-    .hamburger {
-        padding-left: 0.9rem;
-    }
-    
-    .hamburger a {
-        height: 30px;
-        width: 30px;
-    }
-    
-    .bg-img {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .fog-7 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .mountain-10 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .fog-6 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .mountain-9 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .mountain-8 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .fog-5 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .mountain-7 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .mountain-6 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .fog-4 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .mountain-5 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .fog-3 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .mountain-4 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .mountain-3 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .fog-2 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .mountain-2 {
-        display: none;
-    }
-    
-    .flowers {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    
-    .fog-1 {
-        transform: scale(0.5); /* Adjust scale to keep position */
-    }
-    }
-    
-    @media (max-width: 520px) {
-    .text h1 {
-        font-size: 3.3rem;
-    }
-    
-    .text h2 {
-        font-size: 2.6rem;
-    }
-    }
     
